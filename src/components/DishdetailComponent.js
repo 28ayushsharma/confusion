@@ -18,10 +18,13 @@ class DishDetail extends Component{
 
     renderComments(comments){
         return(
-            <ListGroup componentClass="ul">
+            <ListGroup className="list-unstyled">
                 {comments.map((comment) => {
-                    return(
-                    <li key={comment.id} className="list-group-item" >{comment.comment} {comment.author}</li>
+                    return(<div key={comment.id}>
+                            <li   >{comment.comment} {comment.author}</li>
+                            <li >-- {comment.author}, {new Intl.DateTimeFormat('en-US',
+                                { year: 'numeric', month: 'long', day: '2-digit' }).format(new Date(comment.date))}</li>
+                        </div>
                     );
                 })}        
             </ListGroup>
