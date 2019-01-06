@@ -18,16 +18,20 @@ class DishDetail extends Component{
 
     renderComments(comments){
         return(
-            <ListGroup className="list-unstyled">
-                {comments.map((comment) => {
-                    return(<div key={comment.id}>
-                            <li   >{comment.comment} {comment.author}</li>
-                            <li >-- {comment.author}, {new Intl.DateTimeFormat('en-US',
-                                { year: 'numeric', month: 'long', day: '2-digit' }).format(new Date(comment.date))}</li>
-                        </div>
-                    );
-                })}        
-            </ListGroup>
+            <div>
+                <h3>Comments</h3>
+                <ListGroup className="list-unstyled">
+                    {comments.map((comment) => {
+                        return(
+                            <div key={comment.id}>
+                                <li   >{comment.comment} {comment.author}</li>
+                                <li >-- {comment.author}, {new Intl.DateTimeFormat('en-US',
+                                    { year: 'numeric', month: 'long', day: '2-digit' }).format(new Date(comment.date))}</li>
+                            </div>
+                        );
+                    })}        
+                </ListGroup>
+            </div>
         );
     }
 
