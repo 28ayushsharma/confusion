@@ -36,14 +36,15 @@ class DishDetail extends Component{
     }
 
     render(){
-        const dish = this.props.dishdetail
+        const dish = this.props.dish;
+        console.log(dish);
         if(dish != null){
             return(
-                <div className="row">
+                <div>
                     <div className="col-12 col-md-5 m-1">
                         {this.renderDish(dish)}
                     </div>
-                    <div>
+                    <div className="col-12 col-md-5 m-1">
                         <div>
                             {this.renderComments(dish.comments)}
                         </div>
