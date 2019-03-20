@@ -1,5 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technology :
+1. React js
+2. Redux
 
-##Educational React js minor Project
+This project is for educational purpose.
 
 
