@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal, ModalBody, ModalHeader, Label, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Loading } from './LoadingComponent';
+
 
 const maxLength = (len) => (val) => !val || (val.length <= len);
 const minLength = (len) => (val) => val && (val.length >= len);
@@ -139,7 +141,7 @@ function RenderComments({comments, addComment, dishId}){
             return(
                 <div className="container">
                     <div className="row">            
-                        {/* <Loading /> */}
+                        <Loading />
                     </div>
                 </div>
             );
